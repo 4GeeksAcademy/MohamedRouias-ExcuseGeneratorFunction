@@ -6,7 +6,7 @@ import "./assets/img/rigo-baby.jpg";
 import "./assets/img/4geeks.ico";
 
 
-
+//Agarra un item random del arreglo que le pasamos como parámetro
 function getRandomItem(array){
   return array[Math.floor(Math.random() * array.length)];
 }
@@ -18,10 +18,13 @@ window.onload = function() {
   let action = ['ate', 'peed', 'crushed', 'broke'];
   let what = ['my homework', 'my phone', 'the car'];
   let when = ['before the class', 'when I was sleeping', 'while I was exercising', 'during my lunch', 'while I was praying'];
+
+  //Agarramos el randomItem y lo añadimos a la variable correspondiente
   let randomWho = getRandomItem(who)
   let randomAction = getRandomItem(action)
   let randomWhat = getRandomItem(what)
   let randomWhen = getRandomItem(when)
+
   let excuse = document.getElementById("excuse")
   excuse.innerText = randomWho + " " + randomAction + " " + randomWhat + " " + randomWhen
 };
